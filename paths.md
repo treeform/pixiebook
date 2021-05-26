@@ -7,9 +7,47 @@ At the core of vector graphics there is rasterization.
 
 What it does is takes outlines described by liens and curves and fills the grid with appropriate filled and not filled cells.
 
+![path](imgs/svgpath1.png)
+
+A common format to describe vector path is the SVG Path command string.
+
+![path](imgs/svgpath2.png)
+
+First "M" part means move is a move the path pen without drawing anything.
+
+![path](imgs/svgpath3.png)
+
+The second is the "L" line command tell the path pen to draw a line.
+
+![path](imgs/svgpath4.png)
+
+A more complex shape like this start can be described by but the SVG path above. It contains "M" move, "C" curves and "L" lines and "H" horizontal lines.
+
+![path](imgs/svgpath5.png)
+
+First command of this start is a move command.
+
+![path](imgs/svgpath6.png)
+
+Then comes the "C" curve command. It describes a bezier curve.
+
+![path](imgs/svgpath7.png)
+
+Then comes the "L" line command.
+
+![path](imgs/svgpath8.png)
+
+When we fill paths we actually just want lines. So we subdivide the curves into lines.
+
+![path](imgs/svgpath9.png)
+
+We keep subdividing the line segments path until the error of a segment is small enough.
+
+This varies based on what is the scale of the path. A large path can subdivide into many many line segments while a little curve smaller then a pixel can be a just a single segment.
+
 ![path](imgs/path1.png)
 
-Here we have an outline of the image.
+Finally we have an outline of an images all made out of line segments. We can start filling the path.
 
 ![path](imgs/scan1.png)
 
