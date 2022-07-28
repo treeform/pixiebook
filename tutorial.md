@@ -6,7 +6,7 @@ Are you looking for the API reference? https://nimdocs.com/treeform/pixie/pixie.
 
 ## Installing pixie.
 
-### Nim
+## Nim
 
 * Nimble https://nimble.directory/pkg/pixie
 * Github http://github.com/treeform/pixie
@@ -83,7 +83,7 @@ ctx.closePath()
 ctx.fill()
 ```
 
-We can also stroke the shape:
+We can also stroke the shape (that is still in the buffer):
 
 ```nim
 ctx.strokeStyle = "#FFFFFF"
@@ -101,6 +101,24 @@ ctx.image.writeFile("images/context.png")
 ![example output](images/context.png)
 
 > Note: Context api is there for compatibility and there is a more advanced api that can do even more operations.
+
+The rest of the tutorial will not use the `Context API` but use the normal pixie API.
+
+Here is how you would draw the same thing in normal pixie:
+
+```nim
+let image1 = newImage(160, 160)
+image1.fill("#bdc3c7")
+image1.fillPath("M 20 20 L 140 20 L 80 140 z", "#2980b9")
+image1.strokePath("M 20 20 L 140 20 L 80 140 z", "#FFFFFF", strokeWidth = 8)
+image1.writeFile("images/notContext.png")
+```
+
+And see its the same thing:
+
+![example output](images/notContext.png)
+
+Its up to you what you to choose: an API you might already know or some thing more concise.
 
 ## Drawing paths
 
@@ -188,9 +206,9 @@ heart3.writeFile("images/heart3.png")
 
 ![example output](images/heart3.png)
 
-## Blend modes
+## Masking
 
-Pixie supports many different blends and masking modes. You can use masking blends modes to mask out areas:
+Pixie supports many different blends and masking modes. You can use masking blends modes to mask out areas of the image. Here we will draw a background "X" then cut the heart path out of it.
 
 ```nim
 var background = newImage(200, 200)
@@ -245,6 +263,7 @@ background.writeFile("images/masking2.png")
 
 ![example output](images/masking2.png)
 
+This results in a cutout "X" image.
 
 ## Drawing text
 
@@ -291,6 +310,22 @@ textImage.writeFile("images/text2.png")
 ```
 
 ![example output](images/text2.png)
+
+### Supported features
+
+Currently pixie supports many text features but not all of them:
+
+| Description                     | Supported
+| ------------------------------- | ---------
+| ASCII English                   | ✅
+| European Alphabets              | ✅
+| Other Alphabets                 | ✅
+| CJK - Chinese/Japanese/Korean   | ✅
+| Cursive Fonts                   | some
+| Emoji                           | no
+| RTL - Arabic/Hebrew             | no
+| Unicode shaping                 | no
+| Ligatures                       | no
 
 ## For websites
 
@@ -372,7 +407,6 @@ letterProfile.writeFile("images/letterProfile2.png")
 ```
 
 ![example output](images/letterProfile2.png)
-
 
 ## For games and openGL
 
