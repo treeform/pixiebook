@@ -78,7 +78,25 @@ The default blend for everything. Just blends the colors normally.
 
 Masking is just a special blend mode.
 
-### MaskBlend
+### Use MaskBlend to simulate a intersection of masks.
+
+MaskBlend is the default blend for masking operations.
+
+![blend image](images/bool_intersect.png)
+
+### Use NormalBlend to simulate a union of masks.
+
+![blend image](images/bool_union.png)
+
+### Use SubtractMaskBlend to simulate a subtraction of masks.
+
+![blend image](images/bool_subtract.png)
+
+### Use ExcludeMaskBlend to simulate a exclusion of masks.
+
+![blend image](images/bool_exclude.png)
+
+<!-- ### MaskBlend
 
 Default masking blend that is used to mask out or cut out areas.
 
@@ -98,4 +116,4 @@ Subtract is just the opposite of mask blend.
 
 Overwrite blend is special in that it basically copies the data from one image into another without doing anything.
 
-![blend image](images/blendOverwriteBlend.png)
+![blend image](images/blendOverwriteBlend.png) -->
