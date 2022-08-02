@@ -110,10 +110,26 @@ Subtract is just the opposite of mask blend.
 
 ### ExcludeMaskBlend
 
-![blend image](images/blendExcludeMaskBlend.png)
+![blend image](images/blendExcludeMaskBlend.png) -->
 
-### OverwriteBlend
+## OverwriteBlend
 
-Overwrite blend is special in that it basically copies the data from one image into another without doing anything.
+Overwrite blend is special in that it copies the data from one image into another as fast as possible.
 
-![blend image](images/blendOverwriteBlend.png) -->
+This blend is only safe to use on to an image you know is empty. Usually an image that was just created.
+Otherwise odd artifacts will happen.
+
+You can replace NormalBlend with OverwriteBlend if you know that the image you are drawing to is empty.
+Using OverwriteBlend here is faster as it does not care what
+pixies background has:
+
+```nim
+import pixie
+let
+  background = newImage(100, 100)
+  profile = readImage("images/circleProfile.png")
+background.draw(profile, blendMode = OverwriteBlend)
+background.writeFile("images/overwriteBlend.png")
+```
+
+![blend image](images/overwriteBlend.png)

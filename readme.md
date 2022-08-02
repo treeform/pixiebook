@@ -19,10 +19,11 @@ It can also load fonts in `.ttf`, `.otf` formats, as well and less common `.svg`
 ## Table of contents
 
 * [Chapter 1: Tutorial](tutorial.md)
-* [Chapter 2: Images](images.md)
-* [Chapter 3: Paths](paths.md)
-* [Chapter 4: Text](text.md)
-* [Chapter 5: Blending](blending.md)
+* [Chapter 2: Context](context.md)
+* [Chapter 3: Images](images.md)
+* [Chapter 4: Paths](paths.md)
+* [Chapter 5: Text](text.md)
+* [Chapter 6: Blending](blending.md)
 
 ## Helpful links
 
