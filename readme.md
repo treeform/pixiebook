@@ -3,18 +3,21 @@
 
 ![intro](images/intro1.png)
 
-Pixie is a general purpure and full-featured 2d graphics library.
-It allows you to do use vector and raster operations.
-With pixie you can crop images, draw shapes, apply mask, layer gradients, typeset text, load textures for openGL and much more.
-It has an API available in multiple languages `Nim`, `Python` and soon `C`.
-Pixie features its own API as well as a JS-Canvas/Cairo inspired like API for easy porting.
+Pixie is a general purpose and full-featured 2d graphics library, supporting both vector and raster operations.
 
-Pixie is similar to [Cairo](https://www.cairographics.org/) and [Skia](https://skia.org) written entirely in [Nim](https://nim-lang.org/).
+With Pixie you can crop images, draw shapes, apply masks, layer gradients, typeset text, load textures for OpenGL and much more.
 
-Pixie is pretty fast beating Cairo in most cases thanks to optimized algorithms and SIMD support for `SSE2`, `AVX`, `AVX2` for amd64 and `NEON` for Arm and Apple Silicon chips.
+There are API bindings for Pixie available in other languages with more coming soon: [Python](https://github.com/treeform/pixie-python)
 
-It supports a variety of common raster image formats `.png`, `.jpeg`, `.gif`, `.bmp`, as well as some unique formats like `.qoi`, `.ppm`. It also supports a subset of `.svg` which is a vector format.
-It can also load fonts in `.ttf`, `.otf` formats, as well and less common `.svg` font format.
+In addition to Pixie's own API, Pixie also includes a Canvas API those familiar with the `<canvas>` element in Javascript.
+
+Pixie is similar to [Cairo](https://www.cairographics.org/) and [Skia](https://skia.org) and is written entirely in [Nim](https://nim-lang.org/).
+
+Pixie is fast thanks to optimized algorithms and extensive SIMD using both `SSE2` and`AVX2` on x64 CPUs and `NEON` on Arm CPUs and Apple Silicon.
+
+You can use Pixie to load a variety of common raster image formats such as `.png`, `.jpeg`, `.gif`, `.bmp`, as well as some unique formats like `.qoi`, `.ppm`. Pixie also supports a subset of `.svg`.
+
+In addition to loading image formats, Pixie can also load fonts in `.ttf`, `.otf` formats, as well and less common `.svg` font format.
 
 ## Table of contents
 
@@ -27,10 +30,10 @@ It can also load fonts in `.ttf`, `.otf` formats, as well and less common `.svg`
 
 ## Helpful links
 
-* [Github](https://github.com/treeform/pixie)
+* [Pixie on Github](https://github.com/treeform/pixie)
 * [API Reference](https://nimdocs.com/treeform/pixie/pixie.html)
 * [Nimble Directory](https://nimble.directory/pkg/pixie)
-* [Pypi](https://pypi.org/project/pixie-python)
+* [PyPI page for pixie-python](https://pypi.org/project/pixie-python)
 
 ## Videos
 
