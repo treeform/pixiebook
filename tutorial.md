@@ -220,7 +220,7 @@ textImage.writeFile("images/text1.png")
 Text is layed out in spans and spans are layed out into an arrangement.  You can create different spans of text of different fonts and sizes.
 
 ```nim
-textImage = newImage(200, 200)
+var textImage = newImage(200, 200)
 let typeface = readTypeface("fonts/Ubuntu-Regular_1.ttf")
 
 proc newFont(typeface: Typeface, size: float32, color: Color): Font =
