@@ -31,7 +31,7 @@ In addition to loading image formats, Pixie can also load fonts in `.ttf`, `.otf
 ## Helpful links
 
 * [Pixie on Github](https://github.com/treeform/pixie)
-* [API Reference](https://nimdocs.com/treeform/pixie/pixie.html)
+* [API Reference](https://treeform.github.io/pixie/pixie.html)
 * [Nimble Directory](https://nimble.directory/pkg/pixie)
 * [PyPI page for pixie-python](https://pypi.org/project/pixie-python)
 

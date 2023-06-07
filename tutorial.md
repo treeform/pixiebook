@@ -2,7 +2,7 @@
 
 So you came to the right place, here I will help you out with how with pixie basics and how to use it in your projects.
 
-Are you looking for the API reference? https://nimdocs.com/treeform/pixie/pixie.html
+Are you looking for the API reference? https://treeform.github.io/pixie/pixie.html
 
 ## Installing pixie.
 
